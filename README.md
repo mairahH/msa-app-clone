@@ -1,102 +1,72 @@
-# UWMSA Mobile App
+# UW MSA Mobile App (Skeleton Codebase)
 
 ![Node.js CI](https://github.com/uwaterloomsa/uwmsa-mobile-app/actions/workflows/preview.yml/badge.svg)
 
-Here you will find the source code for the UWMSA's mobile app, which can be run on both Android and iOS devices.
+## Overview
+This repository contains a **skeleton version** of the official **UW MSA Mobile App**, which is available for download on the **App Store** and **Google Play Store** under the name **"UW MSA"**. This codebase does **not** include backend functionality but serves as a framework for how the app is structured.
 
-## Environment Setup
+### **About the UW MSA Mobile App**
+The **UW MSA Mobile App** is designed to help **Muslim students navigate life on campus** and provide **new Muslims** with a way to stay connected with **MSA events** and **Islamic reminders**. 
 
-First, you will need to clone this repo:
+### **Features of the Official UW MSA App**
+- 📿 **Prayer Times** – Get accurate prayer timings for your local area.
+- 🔔 **Prayer Reminders** – Set notifications for prayer times.
+- 📢 **Announcements & Updates** – Stay informed about important UW MSA news.
+- 🕌 **Prayer Spots on Campus** – Find locations to pray at UW.
+- 🍽️ **Halal Food Spots Nearby** – Discover halal food options near campus.
+- 📆 **MSA Events & Reminders** – Stay updated on upcoming events and activities.
+- 🕋 **Islamic Reminders** – Daily duas, dhikr, and beneficial content.
 
-```
-git clone git@github.com:uwaterloomsa/uwmsa-mobile-app.git
-```
+## **Environment Setup**
+This skeleton version allows developers to run a front-end demo using Expo. To get started:
 
-Then, you will need to go into this repo's directory:
+1. **Clone this repository:**
+   ```sh
+   git clone https://github.com/your-github/uwmsa-mobile-app-skeleton.git
+   ```
+2. **Navigate into the project directory:**
+   ```sh
+   cd uwmsa-mobile-app-skeleton
+   ```
+3. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-```
-cd uwmsa-mobile-app
-```
+## **Running the App (Development Mode)**
+This project uses [Expo](https://expo.dev/) for easy testing and development.
 
-Install all packages:
+1. **Ensure you have an Expo account** (sign up at [Expo](https://expo.dev/)).
+2. **Download the [Expo Go app](https://expo.dev/client)** on your phone.
+3. **Log in to Expo on your terminal:**
+   ```sh
+   npx expo login -u <your-username> -p <your-password>
+   ```
+4. **Start the Expo development server:**
+   ```sh
+   npx expo start
+   ```
+5. **Run the app on your phone:**
+   - Open the Expo Go app and select the project from the list.
 
-```
-npm install
-```
-
-## Running the Development Server
-
-We are using [Expo](https://expo.dev/) for testing.
-
-Before you can test the app on your device, you will need to create an Expo account.
-
-Then, download the [Expo Go app](https://expo.dev/client) on your phone.
-
-Log in to your Expo account on your terminal (on your computer):
-
-```
-npx expo login -u <username> -p <password>
-```
-
-Then, log in to your Expo account on the Expo Go app on your phone. Logging into both terminal and phone ensures that your phone will find the development server once you run it.
-
-Using the same terminal you used to log in, start the development server:
-
-```
-npx expo start
-```
-
-After a moment, on the Expo Go app on your phone, you should see the UWMSA app show up as an option. Use [this image](./readme_assets/images/expo_go_screenshot.jpg) as a reference.
-
-## Testing Locally
-
-### On Phone
-
-To test on your phone, on the Expo Go app, you should be able to select `uwmsa-mobile-app` and it will download all resources needed and then run. Once you are in the app, to exit, shake your phone and a menu should come up. There should be an option to go Home, which you can click to exit the app.
-
-#### Android Notifications
-
-To get Android notifications working:
-
-Install the EAS CLI: `npm install -g eas-cli`
-
-Then login to EAS with an account with access to the expo organization: `eas login`
-
-Run `eas build:configure` and choose Android in the menu
-
-Then place `google-services.json` (available on the tech team drive) in the root directory.:
-
-Then run `npx expo prebuild`
-
-This will generate the android folder. Use the default package name.
-
-Then you can start the development server as normal.
-
-### On Web
-
-There is also an option to run the app in your browser. In your terminal, run:
-
-```
+## **Testing on Web**
+You can also run the app in a browser:
+```sh
 npx expo start --web
 ```
-Or
-```
-npm run web
-```
 
-## Installing Dependencies
-When installing dependencies, use `expo install` instead of `npm install`. This is because `expo install` will install the correct version of the package for the Expo SDK version you are using.
+## **What’s Missing from This Codebase?**
+This skeleton version **does not include**:
+❌ API Calls (e.g., live prayer times, event images, backend data)
+❌ Push Notifications
+❌ Authentication Features
 
-If you ever forget to do this, you can run `npx expo-doctor` to analyse the project for any issues. It will recommend fixes to compatibility issues.
+These have been **removed** to keep this repository **public-friendly** and free of sensitive credentials.
 
-## Contributing
+## **Contributing**
+This project is for **educational purposes** and is not the official UW MSA app. Contributions are welcome, but note that this codebase is meant as a **reference** rather than an active project.
 
-JazakAllah Khair for contributing to the UWMSA app.
+---
+🕌 **For the full experience, download the real UW MSA App on the App Store & Google Play Store.** 🚀
 
-Made with 💛 by the [UWMSA Team](https://uwmsa.com/pages/meet-the-team).
-
-## Common Problems & Fixes
-
-### Errors running `npx expo start`
-#### Error: EMFILE: too many open files, watch at FSEvent.FSWatcher._handle.onchange (node:internal/fs/watchers:204:21)
-Occurs on M-Chip MacBooks. Try the solutions on this page, specifically `brew install watchman`, https://github.com/expo/expo/issues/29083.
+Made with 💛 by the UW MSA Team.
